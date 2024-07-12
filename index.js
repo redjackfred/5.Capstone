@@ -29,7 +29,7 @@ app.get("/", async (req, res) => {
 app.get("/randomImage", async (req, res) => {
   try {
     const result = await axios.get(
-      `https://api.harvardartmuseums.org/${RESOURCE_TYPE}?apikey=${API_KEY}&q=width:>1000`
+      `https://api.harvardartmuseums.org/${RESOURCE_TYPE}?apikey=${API_KEY}&q=width:>100`
     );
     const imageURL =
       result.data.records[
